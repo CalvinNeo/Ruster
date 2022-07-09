@@ -11,6 +11,10 @@ fn test_mod_path() {
 
 fn test_mod_macro() {
     mod_macro::a::k();
+    use crate::helped;
+    fn unit() {
+        helped!();
+    }
 }
 
 fn main() {
