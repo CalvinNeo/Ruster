@@ -2,6 +2,7 @@
 
 mod mod_path;
 mod mod_macro;
+mod mod_feature;
 
 fn test_mod_path() {
     #[path = "mod_path/foo.rs"]
@@ -20,7 +21,12 @@ fn test_mod_macro() {
     mod_macro::a::k2();
 }
 
+fn test_mod_feature() {
+    mod_feature::run();
+}
+
 fn main() {
     test_mod_path();
     test_mod_macro();
+    test_mod_feature();
 }
