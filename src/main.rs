@@ -1,3 +1,5 @@
+
+
 mod mod_path;
 mod mod_macro;
 
@@ -15,6 +17,7 @@ fn test_mod_macro() {
     fn unit() {
         helped!();
     }
+    mod_macro::a::k2();
 }
 
 fn main() {
