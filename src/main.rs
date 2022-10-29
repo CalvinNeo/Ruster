@@ -1,8 +1,9 @@
-
+#![feature(negative_impls)]
 
 mod mod_path;
 mod mod_macro;
 mod mod_feature;
+mod mod_pin;
 
 fn test_mod_path() {
     #[path = "mod_path/foo.rs"]
@@ -25,8 +26,13 @@ fn test_mod_feature() {
     mod_feature::run();
 }
 
+fn test_mod_pin() {
+    mod_pin::run();
+}
+
 fn main() {
     test_mod_path();
     test_mod_macro();
     test_mod_feature();
+    test_mod_pin();
 }
