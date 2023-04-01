@@ -1,5 +1,5 @@
 struct DebugStruct {
-    pub a: String
+    pub a: String,
 }
 
 #[cfg(test)]
@@ -12,19 +12,21 @@ impl DebugStruct {
 #[cfg(not(test))]
 impl DebugStruct {
     fn new() -> Self {
-        DebugStruct { a: format!("normal") }
+        DebugStruct {
+            a: format!("normal"),
+        }
     }
 }
 
 struct S {
     pub b: i32,
-    pub d: DebugStruct
+    pub d: DebugStruct,
 }
 
 pub fn run() {
     let mut s = S {
         b: 1,
-        d: DebugStruct::new()
+        d: DebugStruct::new(),
     };
     assert_eq!(s.d.a, format!("normal"));
 }
@@ -37,7 +39,7 @@ mod tests {
     fn test_s() {
         let mut s = S {
             b: 1,
-            d: DebugStruct::new()
+            d: DebugStruct::new(),
         };
         assert_eq!(s.d.a, format!("test"));
     }

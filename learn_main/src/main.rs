@@ -1,9 +1,13 @@
 #![feature(negative_impls)]
 
-mod mod_path;
-mod mod_macro;
 mod mod_feature;
+mod mod_lifetime;
+mod mod_macro;
+mod mod_path;
 mod mod_pin;
+mod mod_pointer;
+mod mod_test_macro;
+mod mod_thread;
 
 fn test_mod_path() {
     #[path = "mod_path/foo.rs"]
@@ -30,9 +34,19 @@ fn test_mod_pin() {
     mod_pin::run();
 }
 
+fn test_mod_pointer() {
+    mod_pointer::run();
+}
+
+fn test_mod_lifetime() {
+    mod_lifetime::run();
+}
+
 fn main() {
     test_mod_path();
     test_mod_macro();
     test_mod_feature();
     test_mod_pin();
+    test_mod_pointer();
+    mod_thread::run();
 }

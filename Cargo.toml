@@ -1,10 +1,10 @@
-[package]
-name = "learn"
-version = "0.1.0"
-edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+default-members = ["learn_main"]
+members = [
+    "learn_main",
+    "test_macro"
+]
 
-[dependencies]
-pin-utils = "0.1.0"
-pin-cell = "0.2.0"
+[workspace.dependencies]
+test_macro = { path = "test_macro" }

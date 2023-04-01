@@ -38,7 +38,7 @@ macro_rules! add_list3 {
 }
 
 pub fn k2() {
-    println!("{}", add_list!(1,2,3));
-    println!("{}", add_list2!(1,2,3));
-    println!("{}", add_list3!(1,2,3));
+    assert_eq!(add_list!(1, 2, 3), 6);
+    assert_eq!(add_list2!(1, 2, 3), 6);
+    assert_eq!(add_list3!(1, 2, 3), 6);
 }
