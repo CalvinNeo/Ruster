@@ -1,4 +1,5 @@
 #![feature(negative_impls)]
+#![feature(panic_can_unwind)]
 
 mod mod_feature;
 mod mod_lifetime;
@@ -8,6 +9,7 @@ mod mod_pin;
 mod mod_pointer;
 mod mod_test_macro;
 mod mod_thread;
+mod mod_panic;
 
 fn test_mod_path() {
     #[path = "mod_path/foo.rs"]

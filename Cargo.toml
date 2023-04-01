@@ -3,8 +3,11 @@
 default-members = ["learn_main"]
 members = [
     "learn_main",
-    "test_macro"
+    "test_macro",
+    "test_ffi",
 ]
 
 [workspace.dependencies]
 test_macro = { path = "test_macro" }
+test_ffi = { path = "test_ffi" }
+test_ffi_lib = { path = "test_ffi_lib" }
